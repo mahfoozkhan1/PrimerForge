@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="PrimerForge — automated primer design, thermodynamic validation and specificity screening.">
+  <title>PrimerForge — Primer Design & Validation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="PrimerForge home"><span class="brand-mark"><i></i><i></i><i></i></span><span>Primer<span>Forge</span></span></a>
+      <div class="topbar-meta"><span class="live-dot"></span><span>In-silico design & validation</span></div>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow">BIOINFORMATICS WORKBENCH <span>•</span> v1.0</div>
+        <h1>Design smarter.<br><em>Validate before the bench.</em></h1>
+        <p>Automate primer candidate generation, thermodynamic screening and optional NCBI BLAST specificity checks in one workflow.</p>
+        <div class="hero-points"><span>01 Design</span><span>02 Validate</span><span>03 Rank</span></div>
+      </div>
+      <div class="hero-orbit" aria-hidden="true"><div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div><div class="dna"><b></b><b></b><b></b><b></b><b></b><b></b></div></div>
+    </section>
+
+    <section class="workspace">
+      <div class="panel input-panel">
+        <div class="panel-head"><div><span class="step">01</span><div><h2>Define your assay</h2><p>Choose the chemistry first. PrimerForge applies assay-specific constraints.</p></div></div></div>
+        <div class="assay-grid" id="assayGrid">
+          <button class="assay active" data-assay="pcr"><strong>PCR</strong><small>Conventional amplification</small></button>
+          <button class="assay" data-assay="rtpcr"><strong>RT-PCR</strong><small>RNA → cDNA targets</small></button>
+          <button class="assay" data-assay="qpcr"><strong>qPCR</strong><small>Real-time quantification</small></button>
+          <button class="assay" data-assay="ddpcr"><strong>ddPCR</strong><small>Partition-based assays</small></button>
+          <button class="assay" data-assay="mirna"><strong>miRNA</strong><small>Small RNA assays</small></button>
+          <button class="assay" data-assay="sirna"><strong>siRNA</strong><small>Knockdown candidates</small></button>
+        </div>
+        <div class="field-row">
+          <label>Target organism<input id="organism" placeholder="e.g. Homo sapiens"></label>
+          <label>Specificity database<select id="db"><option value="nt">NCBI nt</option><option value="refseq_rna">NCBI RefSeq RNA</option></select></label>
+        </div>
+        <div class="sequence-head"><label for="seq">FASTA / nucleotide sequence</label><span id="seqCount">0 nt</span></div>
+        <textarea id="seq" spellcheck="false" placeholder=">TP53\nATGGAGGAGCCGCAGTCAGATCCTAGCG...\n\nPaste a FASTA record or raw nucleotide sequence"></textarea>
+        <div class="input-tools"><label class="toggle"><input id="blast" type="checkbox" checked><span class="toggle-ui"></span><span><b>Run NCBI BLAST</b><small>Specificity screening</small></span></label><span class="tip">BLAST adds an external specificity check and may take longer.</span></div>
+        <button id="run" class="primary"><span class="btn-label">Design & validate primers</span><span class="arrow">→</span></button>
+        <div id="status" class="status" role="status"></div>
+      </div>
+
+      <aside class="panel settings-panel">
+        <div class="panel-head compact"><div><span class="step">02</span><div><h2>Assay profile</h2><p>Active constraints</p></div></div></div>
+        <div id="profile"></div>
+        <div class="divider"></div>
+        <div class="mini-info"><span class="icon">⌁</span><div><b>Automated screening</b><p>GC%, Tm, hairpins, homo/heterodimers, complementarity and ranking.</p></div></div>
+        <div class="mini-info"><span class="icon">◎</span><div><b>Specificity layer</b><p>Optional primer-level NCBI BLAST results are surfaced with the final candidates.</p></div></div>
+        <div class="mini-info"><span class="icon">↗</span><div><b>Human review still matters</b><p>In-silico results support experimental design; they do not replace wet-lab validation.</p></div></div>
+      </aside>
+    </section>
+
+    <section id="results" class="results hidden"></section>
+    <footer><span>PrimerForge</span><span>Made by Md Mahfooz Khan</span><span>Automated in-silico primer workflow</span></footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
