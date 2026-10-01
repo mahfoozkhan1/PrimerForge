@@ -1,0 +1,6 @@
+{
+  "tests/test_api.py": true,
+  "tests/test_sequence.py::test_parse": true,
+  "tests/test_sequence.py::test_gc": true,
+  "tests/test_sequence.py::test_revcomp": true
+}
