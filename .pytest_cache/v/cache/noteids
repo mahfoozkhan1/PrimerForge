@@ -1,0 +1,5 @@
+[
+  "tests/test_sequence.py::test_gc",
+  "tests/test_sequence.py::test_parse",
+  "tests/test_sequence.py::test_revcomp"
+]
