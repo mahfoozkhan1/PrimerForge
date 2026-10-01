@@ -1,0 +1,21 @@
+ó
+    œP¾j­   ã                   óL   • S SK rS SKJs  Jr  S SKJ r   S SKJ	r	  \ " \	5      r
+S r
+g)é    N)Ú
+TestClient)Úappc                   óÜ  • [         R                  S5      n U R                  nSo!U:H  o3(       dº  [        R                  " SU4SX45      S[
+        R                  " 5       ;   d  [        R                  " U 5      (       a  [        R                  " U 5      OS[        R                  " U5      [        R                  " U5      S.-  nS SU0-  n[        [        R                  " U5      5      eS =n=p2g )	Nz
+/api/healthéÈ   )ú==)z3%(py2)s
+{%(py2)s = %(py0)s.status_code
+} == %(py5)sÚr)Úpy0Úpy2Úpy5zassert %(py7)sÚpy7)
+ÚclientÚgetÚ
+status_codeÚ
+@pytest_arÚ_call_reprcompareÚ@py_builtinsÚlocalsÚ_should_repr_global_nameÚ	_safereprÚAssertionErrorÚ_format_explanation)r   Ú
+@py_assert1Ú
+@py_assert4Ú
+@py_assert3Ú
+@py_format6Ú
+@py_format8s         Ú3/mnt/data/PrimerForge/primerforge/tests/test_api.pyÚ
+test_healthr      s   € Ü‡jjÓ€AØ
+=‰=Ð˜#Ð˜#Ñ
+×××Òˆ=×××××Õˆ1×××Ñˆ1××Õˆ=××Ó˜#××××××Ôó    )Úbuiltinsr   Ú_pytest.assertion.rewriteÚ	assertionÚ rewriter   Úfastapi.testclientr   Úapp.mainr   r
+   r   © r   r   Ú<module>r'      s   ðß  „ Õ )Ý á #ƒ€ór   
